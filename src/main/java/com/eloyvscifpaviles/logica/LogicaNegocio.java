@@ -417,8 +417,17 @@ public class LogicaNegocio {
             }
         }
         return vueloDiarioSalida;
-    }
+    }    
     
+  /*  public static VueloDiario getVuelosDiarioByCompanya(String companya) {
+        List<VueloDiario>;
+        for (VueloDiario vd : lstVuelosDiario) {
+            if (vd.ge) {
+                return vd;
+            }
+        }
+        return vueloDiarioSalida;
+    } */
     public static VueloDiario getVueloDiarioByCodigoYFecha(String codigo, Date fecha) {
         VueloDiario vueloDiarioSalida = null;
         for (VueloDiario vd : lstVuelosDiario) {
