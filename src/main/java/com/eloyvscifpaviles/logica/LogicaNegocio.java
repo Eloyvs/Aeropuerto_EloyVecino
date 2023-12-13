@@ -129,6 +129,16 @@ public class LogicaNegocio {
         lstCompanyas.remove(delComp);
 
     }
+    
+    public static List<Companya> recuperarCompanyas() {
+       List<Companya> comps = new ArrayList<>();
+       
+       for(Companya a : lstCompanyas){
+           comps.add(a);
+       }
+       
+       return comps;
+    }
 
     //Buscar compañía por su código identificativo
     public static Companya getCompanyaByCodigo(String codigo) {
@@ -435,6 +445,14 @@ public class LogicaNegocio {
                 return vd;
             }
         }
+        return vueloDiarioSalida;
+    }
+    
+    public static List<VueloDiario> getVuelosDiarios() {
+       List <VueloDiario> vueloDiarioSalida = new ArrayList<>();
+        for (VueloDiario vd : lstVuelosDiario) {
+            vueloDiarioSalida.add(vd);
+            }
         return vueloDiarioSalida;
     }
     
