@@ -10,14 +10,18 @@ import com.eloyvscifpaviles.logica.ConsultaCompanyaTableModel;
 import com.eloyvscifpaviles.logica.ConsultaVueloDiarioTableModel;
 import com.eloyvscifpaviles.logica.LogicaNegocio;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import javax.swing.RowFilter;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
  * @author Eloyvs
  */
 public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
-
+    TableRowSorter<ConsultaVueloDiarioTableModel> filtroTabla;
+    
     /**
      * Creates new form dlgVuelosCompanyaPaneles
      */
@@ -50,7 +54,6 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
         txtDia = new javax.swing.JTextField();
         txtMes = new javax.swing.JTextField();
         txtAnyo = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbVuelos = new javax.swing.JTable();
 
@@ -72,8 +75,6 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
                 txtVuelosActionPerformed(evt);
             }
         });
-
-        jLabel5.setText("La fecha aún no sirve de nada, sin implementar");
 
         tbVuelos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -119,9 +120,6 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(txtAnyo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(146, 146, 146)
                         .addComponent(txtVuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
@@ -147,9 +145,7 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
                             .addComponent(txtDia, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtMes, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAnyo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addGap(76, 76, 76)
                         .addComponent(txtVuelos))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -163,6 +159,10 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
     private void txtVuelosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVuelosActionPerformed
         char uno = txtNombre.getText().toString().charAt(0);
         char dos = txtNombre.getText().toString().charAt(1);
+        int dia = Integer.parseInt(txtDia.getText());
+        int mes = Integer.parseInt(txtMes.getText());
+        int anyo = Integer.parseInt(txtAnyo.getText());
+        Date fecha = new Date(anyo - 1900, mes, dia);
         String comp ="";
         List<VueloDiario> vuelos = LogicaNegocio.getVuelosDiarios();
         List <VueloDiario> vuelos2 = new ArrayList<>();
@@ -174,7 +174,9 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
         }
         
         tbVuelos.setModel(new ConsultaVueloDiarioTableModel(vuelos2));
+        RowFilter<ConsultaVueloDiarioTableModel, Integer> filtrazo = RowFilter.dateFilter(RowFilter.ComparisonType.EQUAL, fecha, 1);
         
+        filtroTabla.setRowFilter(filtrazo);
         
     }//GEN-LAST:event_txtVuelosActionPerformed
 
@@ -225,7 +227,6 @@ public class dlgVuelosCompanyaPaneles extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;

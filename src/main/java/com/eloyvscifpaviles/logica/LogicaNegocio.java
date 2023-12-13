@@ -429,15 +429,6 @@ public class LogicaNegocio {
         return vueloDiarioSalida;
     }    
     
-  /*  public static VueloDiario getVuelosDiarioByCompanya(String companya) {
-        List<VueloDiario>;
-        for (VueloDiario vd : lstVuelosDiario) {
-            if (vd.ge) {
-                return vd;
-            }
-        }
-        return vueloDiarioSalida;
-    } */
     public static VueloDiario getVueloDiarioByCodigoYFecha(String codigo, Date fecha) {
         VueloDiario vueloDiarioSalida = null;
         for (VueloDiario vd : lstVuelosDiario) {
@@ -452,6 +443,16 @@ public class LogicaNegocio {
        List <VueloDiario> vueloDiarioSalida = new ArrayList<>();
         for (VueloDiario vd : lstVuelosDiario) {
             vueloDiarioSalida.add(vd);
+            }
+        return vueloDiarioSalida;
+    }
+    
+    public static List<VueloDiario> getVuelosDiariosByDestino(Aeropuerto aero) {
+       List <VueloDiario> vueloDiarioSalida = new ArrayList<>();
+        for (VueloDiario vd : lstVuelosDiario) {
+            if(vd.getCodAeroDestino().equalsIgnoreCase(aero.getCodigoIATA())){
+                vueloDiarioSalida.add(vd);
+            }
             }
         return vueloDiarioSalida;
     }

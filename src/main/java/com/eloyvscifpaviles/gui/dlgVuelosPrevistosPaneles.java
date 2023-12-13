@@ -4,6 +4,12 @@
  */
 package com.eloyvscifpaviles.gui;
 
+import com.eloyvscifpaviles.dto.Aeropuerto;
+import com.eloyvscifpaviles.dto.VueloDiario;
+import com.eloyvscifpaviles.logica.ConsultaVueloDiarioTableModel;
+import com.eloyvscifpaviles.logica.LogicaNegocio;
+import java.util.List;
+
 /**
  *
  * @author Eloyvs
@@ -21,6 +27,7 @@ public class dlgVuelosPrevistosPaneles extends javax.swing.JDialog {
     public dlgVuelosPrevistosPaneles() {
 
         initComponents();
+         recuperarAeropuertos();
     }
 
     /**
@@ -32,21 +39,90 @@ public class dlgVuelosPrevistosPaneles extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbVuelos = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        cbAeropuerto = new javax.swing.JComboBox<>();
+        btnComprobar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        tbVuelos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbVuelos);
+
+        jLabel1.setText("Destino");
+
+        cbAeropuerto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAeropuertoActionPerformed(evt);
+            }
+        });
+
+        btnComprobar.setText("Comprobar");
+        btnComprobar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComprobarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel1)
+                        .addGap(46, 46, 46)
+                        .addComponent(cbAeropuerto, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 70, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(222, 222, 222)
+                .addComponent(btnComprobar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(cbAeropuerto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnComprobar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarActionPerformed
+        Aeropuerto destino = LogicaNegocio.getAeropuertoByNombre(cbAeropuerto.getSelectedItem().toString());
+        List<VueloDiario> vuelos = LogicaNegocio.getVuelosDiariosByDestino(destino);
+        
+        tbVuelos.setModel(new ConsultaVueloDiarioTableModel(vuelos));
+    }//GEN-LAST:event_btnComprobarActionPerformed
+
+    private void cbAeropuertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAeropuertoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbAeropuertoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,7 +165,27 @@ public class dlgVuelosPrevistosPaneles extends javax.swing.JDialog {
             }
         });
     }
+    
+    public void recuperarAeropuertos() {
+        //Aquí quería usar la variable lstVuelosBase de lógica negocio para no crear otra lista
+        //pero no sé si puedo y si puedo no fui capaz así que cree una lista nueva y le asigné los vuelos
+        //como hice con la lista de logica negocio
+        List<Aeropuerto> aeropuertos = LogicaNegocio.leerAeropuertos();
+
+        for (Aeropuerto a : aeropuertos) {
+            cbAeropuerto.addItem(a.getNombre());
+            
+        }
+        
+        cbAeropuerto.setSelectedIndex(0);
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnComprobar;
+    private javax.swing.JComboBox<String> cbAeropuerto;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tbVuelos;
     // End of variables declaration//GEN-END:variables
 }
