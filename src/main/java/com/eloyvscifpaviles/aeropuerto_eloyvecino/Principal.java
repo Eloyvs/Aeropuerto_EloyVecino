@@ -5,7 +5,12 @@
 package com.eloyvscifpaviles.aeropuerto_eloyvecino;
 
 import com.eloyvscifpaviles.gui.dlgAltaVueloBase;
+import com.eloyvscifpaviles.gui.dlgAltaVueloDiario;
+import com.eloyvscifpaviles.gui.dlgBajaVueloBase;
+import com.eloyvscifpaviles.gui.dlgBajaVueloDiario;
 import com.eloyvscifpaviles.gui.dlgBorrarCompanya;
+import com.eloyvscifpaviles.gui.dlgConsultaVueloBase;
+import com.eloyvscifpaviles.gui.dlgConsultaVueloDiario;
 import com.eloyvscifpaviles.gui.dlgConsultasCompanya;
 import com.eloyvscifpaviles.gui.dlgInsertarCompanya;
 import com.eloyvscifpaviles.gui.dlgMenuCompanya;
@@ -13,6 +18,13 @@ import com.eloyvscifpaviles.gui.dlgMenuPaneles;
 import com.eloyvscifpaviles.gui.dlgMenuVueloBase;
 import com.eloyvscifpaviles.gui.dlgMenuVueloDiario;
 import com.eloyvscifpaviles.gui.dlgModificarCompanya;
+import com.eloyvscifpaviles.gui.dlgModificarVueloBase;
+import com.eloyvscifpaviles.gui.dlgModificarVueloDiario;
+import com.eloyvscifpaviles.gui.dlgRecaudacionesPaneles;
+import com.eloyvscifpaviles.gui.dlgVuelosCompanyaPaneles;
+import com.eloyvscifpaviles.gui.dlgVuelosLlegadaPanel;
+import com.eloyvscifpaviles.gui.dlgVuelosPrevistosPaneles;
+import com.eloyvscifpaviles.gui.dlgVuelosSalidaPanel;
 import com.eloyvscifpaviles.logica.LogicaNegocio;
 
 /**
@@ -195,6 +207,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem10.setText("Modificar");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         mnVueloBase.add(jMenuItem10);
 
         jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -212,6 +229,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem12.setText("Principal");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         mnVueloDiario.add(jMenuItem12);
 
         jMenuItem13.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -225,10 +247,20 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem14.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem14.setText("Baja");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
         mnVueloDiario.add(jMenuItem14);
 
         jMenuItem15.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem15.setText("Modificar");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
         mnVueloDiario.add(jMenuItem15);
 
         jMenuItem16.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -246,10 +278,20 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem17.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem17.setText("Principal");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
         mnPaneles.add(jMenuItem17);
 
         jMenuItem18.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem18.setText("Salida");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
         mnPaneles.add(jMenuItem18);
 
         jMenuItem19.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -281,6 +323,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem22.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_W, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem22.setText("Vuelos Previstos");
+        jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem22ActionPerformed(evt);
+            }
+        });
         mnPaneles.add(jMenuItem22);
 
         jMenuBar1.add(mnPaneles);
@@ -355,31 +402,38 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+        dlgBajaVueloBase baja = new dlgBajaVueloBase();
+        baja.setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
+       dlgConsultaVueloBase con = new dlgConsultaVueloBase();
+       con.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
+        dlgAltaVueloDiario vDiario = new dlgAltaVueloDiario();
+        vDiario.setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
-        // TODO add your handling code here:
+        dlgConsultaVueloDiario cvd = new dlgConsultaVueloDiario();
+        cvd.setVisible(true);
     }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     private void jMenuItem19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem19ActionPerformed
-        // TODO add your handling code here:
+       dlgVuelosLlegadaPanel llegada = new dlgVuelosLlegadaPanel();
+       llegada.setVisible(true);
     }//GEN-LAST:event_jMenuItem19ActionPerformed
 
     private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
-        // TODO add your handling code here:
+       dlgVuelosCompanyaPaneles paneles = new dlgVuelosCompanyaPaneles();
+       paneles.setVisible(true);
     }//GEN-LAST:event_jMenuItem20ActionPerformed
 
     private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
-        // TODO add your handling code here:
+        dlgRecaudacionesPaneles recau = new dlgRecaudacionesPaneles();
+        recau.setVisible(true);
     }//GEN-LAST:event_jMenuItem21ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -411,6 +465,41 @@ public class Principal extends javax.swing.JFrame {
         dlgMenuVueloBase vuel = new dlgMenuVueloBase();
         vuel.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        dlgModificarVueloBase mod = new dlgModificarVueloBase();
+        mod.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+       dlgMenuVueloDiario vd = new dlgMenuVueloDiario();
+       vd.setVisible(true);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        dlgBajaVueloDiario baja = new dlgBajaVueloDiario();
+        baja.setVisible(true);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        dlgModificarVueloDiario vDi = new dlgModificarVueloDiario();
+        vDi.setVisible(true);
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        dlgMenuPaneles mp = new dlgMenuPaneles();
+        mp.setVisible(true);
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        dlgVuelosSalidaPanel vsPanel = new dlgVuelosSalidaPanel();
+        vsPanel.setVisible(true);
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
+    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
+       dlgVuelosPrevistosPaneles pan = new dlgVuelosPrevistosPaneles();
+       pan.setVisible(true);
+    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
     /**
      * @param args the command line arguments
