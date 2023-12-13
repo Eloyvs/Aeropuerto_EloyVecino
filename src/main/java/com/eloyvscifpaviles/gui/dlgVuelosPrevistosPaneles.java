@@ -8,14 +8,17 @@ import com.eloyvscifpaviles.dto.Aeropuerto;
 import com.eloyvscifpaviles.dto.VueloDiario;
 import com.eloyvscifpaviles.logica.ConsultaVueloDiarioTableModel;
 import com.eloyvscifpaviles.logica.LogicaNegocio;
+import java.util.Date;
 import java.util.List;
+import javax.swing.RowFilter;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
  * @author Eloyvs
  */
 public class dlgVuelosPrevistosPaneles extends javax.swing.JDialog {
-
+    TableRowSorter<ConsultaVueloDiarioTableModel> filtroTabla;
     /**
      * Creates new form dlgVuelosPrevistosPaneles
      */
@@ -116,8 +119,10 @@ public class dlgVuelosPrevistosPaneles extends javax.swing.JDialog {
     private void btnComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarActionPerformed
         Aeropuerto destino = LogicaNegocio.getAeropuertoByNombre(cbAeropuerto.getSelectedItem().toString());
         List<VueloDiario> vuelos = LogicaNegocio.getVuelosDiariosByDestino(destino);
+        Date fecha = new Date();
         
         tbVuelos.setModel(new ConsultaVueloDiarioTableModel(vuelos));
+        RowFilter<ConsultaVueloDiarioTableModel, Integer> filtrazo = RowFilter.dateFilter(RowFilter.ComparisonType.AFTER, fecha, 1);
     }//GEN-LAST:event_btnComprobarActionPerformed
 
     private void cbAeropuertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAeropuertoActionPerformed
