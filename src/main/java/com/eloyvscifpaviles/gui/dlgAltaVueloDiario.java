@@ -295,7 +295,7 @@ public class dlgAltaVueloDiario extends javax.swing.JDialog {
        int dia = Integer.parseInt(txtDia.getText());
        int mes = Integer.parseInt(txtMes.getText());
        int anyo = Integer.parseInt(txtAnyo.getText());
-       Date fecha = new Date (anyo - 1901, mes, dia);
+       Date fecha = new Date (anyo - 1900, mes, dia);
        vD.setFechaVuelo(fecha);
        int horaSalida = Integer.parseInt(txtHoraSalida.getText());
        int minSalida = Integer.parseInt(txtMinSalida.getText());
