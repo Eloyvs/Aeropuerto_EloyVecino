@@ -41,6 +41,11 @@ public class dlgMenuPaneles extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btnVuelosCom.setText("Vuelos Compañía");
+        btnVuelosCom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVuelosComActionPerformed(evt);
+            }
+        });
 
         btnSalidas.setText("Salidas");
         btnSalidas.addActionListener(new java.awt.event.ActionListener() {
@@ -50,6 +55,11 @@ public class dlgMenuPaneles extends javax.swing.JDialog {
         });
 
         btnVuelosPrevistos.setText("Vuelos Previstos");
+        btnVuelosPrevistos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVuelosPrevistosActionPerformed(evt);
+            }
+        });
 
         btnRecaudaciones.setText("Recaudaciones");
         btnRecaudaciones.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +126,16 @@ public class dlgMenuPaneles extends javax.swing.JDialog {
         dlgVuelosSalidaPanel salidas = new dlgVuelosSalidaPanel();
         salidas.setVisible(true);
     }//GEN-LAST:event_btnSalidasActionPerformed
+
+    private void btnVuelosComActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVuelosComActionPerformed
+        dlgVuelosCompanyaPaneles vComp = new dlgVuelosCompanyaPaneles();
+        vComp.setVisible(true);
+    }//GEN-LAST:event_btnVuelosComActionPerformed
+
+    private void btnVuelosPrevistosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVuelosPrevistosActionPerformed
+        dlgVuelosPrevistosPaneles vPrev = new dlgVuelosPrevistosPaneles();
+                vPrev.setVisible(true);
+    }//GEN-LAST:event_btnVuelosPrevistosActionPerformed
 
     /**
      * @param args the command line arguments

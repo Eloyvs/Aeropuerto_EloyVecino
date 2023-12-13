@@ -66,6 +66,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Vuelos Compa&#xf1;&#xed;a"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVuelosComActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalidas">
       <Properties>
@@ -79,6 +82,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Vuelos Previstos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVuelosPrevistosActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnRecaudaciones">
       <Properties>
