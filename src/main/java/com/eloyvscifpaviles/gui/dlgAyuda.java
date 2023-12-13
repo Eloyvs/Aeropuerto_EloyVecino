@@ -31,30 +31,83 @@ public class dlgAyuda extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Clic en Vuelos Base para entrar en el menú de Vuelos Base\n\tAltas: Permite registrar un vuelo base introduciendo datos\n\t\tAl pulsar vaciar campos todas las casillas se borrarán\n\tBajas: Permite eliminar un vuelo base\n\t\tIntroduce el código del vuelo que quieres borrar\n\t\ty pulsa el botón\n\tModificar: Permite cambiar los datos del vuelo\n\t\tRellena los campos con los nuevos datos del vuelo\n\t\tSe cambiarán los datos de la compañía que haga referencia\n\t\tal código introducido\n\tConsulta: Permite ver todos los vuelos base existentes\n");
+        jScrollPane2.setViewportView(jTextArea2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Clic en Compañías para entrar en el menú de compañías\n\tAltas: Permite registrar una compañía introduciendo datos\n\t\tAl pulsar vaciar campos todas las casillas se borrarán\n\tBajas: Permite eliminar una compañía\n\t\tIntroduce el código de la compañía que quieres borrar\n\t\ty pulsa el botón\n\tModificar: Permite cambiar los datos de la compañía\n\t\tRellena los campos con los nuevos datos de la compañía\n\t\tSe cambiarán los datos de la compañía que haga referencia\n\t\tal código introducido\n\tConsulta: Permite ver todas las compañías existentes\n");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Clic en Paneles para entrar en el menú de Paneles\n\tSalidas: Permite ver las salidas que se efectuarán en el aeropuerto\n\t\tIntroduce la fecha a consultar y pulsa el botón\n\tLlegadas: Permite ver las llegadas que se efectuarán en el aeropuerto\n\t\tIntroduce la fecha a consultar y pulsa el botón\n\tVuelos compañía: Permite ver los vuelos de una compañía en un día concreto\n\t\tIntroduce el nombre de la compañía y los días que quieres \n\t\tconsultar, presiona el botón.\n\tRecaudaciones: Función no disponible.\n\t\tNo sé realmente ni como plantear esta función, lo siento\n\tVuelos Previstos: Te muestra los vuelos previstos a salir hacia cierto destino \n\t\tdesde la fecha actual\n\t\tSelecciona el destino deseado en el desplegable y presiona el\n\t\tbotón\n\t\t\n\t\t\n\t\t");
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jTextArea4.setText("Clic en Vuelos Base para entrar en el menú de Vuelos Base\n\tAltas: Permite registrar un vuelo base introduciendo datos\n\t\tAl pulsar vaciar campos todas las casillas se borrarán\n\tBajas: Permite eliminar un vuelo base\n\t\tIntroduce el código del vuelo que quieres borrar\n\t\ty pulsa el botón\n\tModificar: Permite cambiar los datos del vuelo\n\t\tRellena los campos con los nuevos datos del vuelo\n\t\tSe cambiarán los datos de la compañía que haga referencia\n\t\tal código introducido\n\tConsulta: Permite ver todos los vuelos base existentes\n");
+        jScrollPane4.setViewportView(jTextArea4);
+
+        jTextArea5.setColumns(20);
+        jTextArea5.setRows(5);
+        jTextArea5.setText("Clic en Vuelos Diarios para entrar en el menú de VuelosDiarios\n\tAltas: Permite registrar un vuelo diario introduciendo datos\n\t\tAl pulsar vaciar campos todas las casillas se borrarán\n\tBajas: Permite eliminar un vuelo base\n\t\tIntroduce el código del vuelo que quieres borrar y la fecha\n\t\ten la que trabaja y pulsa el botón\n\tModificar: Permite cambiar los datos del vuelo\n\t\tIntroduce el código y la fecha del vuelo a modificar\n\t\tIntroduce las nuevas horas del vuelo\n\t\tClic en modificar\n\tConsulta: Permite ver todos los vuelos diarios existentes\n");
+        jScrollPane5.setViewportView(jTextArea5);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 28, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,5 +157,15 @@ public class dlgAyuda extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 }

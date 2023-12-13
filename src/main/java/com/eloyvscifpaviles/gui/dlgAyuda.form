@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea2">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Clic en Vuelos Base para entrar en el men&#xfa; de Vuelos Base&#xa;&#x9;Altas: Permite registrar un vuelo base introduciendo datos&#xa;&#x9;&#x9;Al pulsar vaciar campos todas las casillas se borrar&#xe1;n&#xa;&#x9;Bajas: Permite eliminar un vuelo base&#xa;&#x9;&#x9;Introduce el c&#xf3;digo del vuelo que quieres borrar&#xa;&#x9;&#x9;y pulsa el bot&#xf3;n&#xa;&#x9;Modificar: Permite cambiar los datos del vuelo&#xa;&#x9;&#x9;Rellena los campos con los nuevos datos del vuelo&#xa;&#x9;&#x9;Se cambiar&#xe1;n los datos de la compa&#xf1;&#xed;a que haga referencia&#xa;&#x9;&#x9;al c&#xf3;digo introducido&#xa;&#x9;Consulta: Permite ver todos los vuelos base existentes&#xa;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
@@ -23,12 +41,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -38,15 +59,100 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane3" min="-2" pref="525" max="-2" attributes="0"/>
+                      <Component id="jScrollPane5" min="-2" pref="525" max="-2" attributes="0"/>
+                      <Component id="jScrollPane4" min="-2" pref="525" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="525" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="211" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" min="-2" pref="211" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Component id="jScrollPane5" min="-2" pref="211" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" pref="299" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea1">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Clic en Compa&#xf1;&#xed;as para entrar en el men&#xfa; de compa&#xf1;&#xed;as&#xa;&#x9;Altas: Permite registrar una compa&#xf1;&#xed;a introduciendo datos&#xa;&#x9;&#x9;Al pulsar vaciar campos todas las casillas se borrar&#xe1;n&#xa;&#x9;Bajas: Permite eliminar una compa&#xf1;&#xed;a&#xa;&#x9;&#x9;Introduce el c&#xf3;digo de la compa&#xf1;&#xed;a que quieres borrar&#xa;&#x9;&#x9;y pulsa el bot&#xf3;n&#xa;&#x9;Modificar: Permite cambiar los datos de la compa&#xf1;&#xed;a&#xa;&#x9;&#x9;Rellena los campos con los nuevos datos de la compa&#xf1;&#xed;a&#xa;&#x9;&#x9;Se cambiar&#xe1;n los datos de la compa&#xf1;&#xed;a que haga referencia&#xa;&#x9;&#x9;al c&#xf3;digo introducido&#xa;&#x9;Consulta: Permite ver todas las compa&#xf1;&#xed;as existentes&#xa;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea3">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Clic en Paneles para entrar en el men&#xfa; de Paneles&#xa;&#x9;Salidas: Permite ver las salidas que se efectuar&#xe1;n en el aeropuerto&#xa;&#x9;&#x9;Introduce la fecha a consultar y pulsa el bot&#xf3;n&#xa;&#x9;Llegadas: Permite ver las llegadas que se efectuar&#xe1;n en el aeropuerto&#xa;&#x9;&#x9;Introduce la fecha a consultar y pulsa el bot&#xf3;n&#xa;&#x9;Vuelos compa&#xf1;&#xed;a: Permite ver los vuelos de una compa&#xf1;&#xed;a en un d&#xed;a concreto&#xa;&#x9;&#x9;Introduce el nombre de la compa&#xf1;&#xed;a y los d&#xed;as que quieres &#xa;&#x9;&#x9;consultar, presiona el bot&#xf3;n.&#xa;&#x9;Recaudaciones: Funci&#xf3;n no disponible.&#xa;&#x9;&#x9;No s&#xe9; realmente ni como plantear esta funci&#xf3;n, lo siento&#xa;&#x9;Vuelos Previstos: Te muestra los vuelos previstos a salir hacia cierto destino &#xa;&#x9;&#x9;desde la fecha actual&#xa;&#x9;&#x9;Selecciona el destino deseado en el desplegable y presiona el&#xa;&#x9;&#x9;bot&#xf3;n&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea4">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Clic en Vuelos Base para entrar en el men&#xfa; de Vuelos Base&#xa;&#x9;Altas: Permite registrar un vuelo base introduciendo datos&#xa;&#x9;&#x9;Al pulsar vaciar campos todas las casillas se borrar&#xe1;n&#xa;&#x9;Bajas: Permite eliminar un vuelo base&#xa;&#x9;&#x9;Introduce el c&#xf3;digo del vuelo que quieres borrar&#xa;&#x9;&#x9;y pulsa el bot&#xf3;n&#xa;&#x9;Modificar: Permite cambiar los datos del vuelo&#xa;&#x9;&#x9;Rellena los campos con los nuevos datos del vuelo&#xa;&#x9;&#x9;Se cambiar&#xe1;n los datos de la compa&#xf1;&#xed;a que haga referencia&#xa;&#x9;&#x9;al c&#xf3;digo introducido&#xa;&#x9;Consulta: Permite ver todos los vuelos base existentes&#xa;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea5">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="Clic en Vuelos Diarios para entrar en el men&#xfa; de VuelosDiarios&#xa;&#x9;Altas: Permite registrar un vuelo diario introduciendo datos&#xa;&#x9;&#x9;Al pulsar vaciar campos todas las casillas se borrar&#xe1;n&#xa;&#x9;Bajas: Permite eliminar un vuelo base&#xa;&#x9;&#x9;Introduce el c&#xf3;digo del vuelo que quieres borrar y la fecha&#xa;&#x9;&#x9;en la que trabaja y pulsa el bot&#xf3;n&#xa;&#x9;Modificar: Permite cambiar los datos del vuelo&#xa;&#x9;&#x9;Introduce el c&#xf3;digo y la fecha del vuelo a modificar&#xa;&#x9;&#x9;Introduce las nuevas horas del vuelo&#xa;&#x9;&#x9;Clic en modificar&#xa;&#x9;Consulta: Permite ver todos los vuelos diarios existentes&#xa;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>
