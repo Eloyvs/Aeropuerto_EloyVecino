@@ -22,7 +22,7 @@ public class AemetTest {
     public static void main(String[] args){
         try{
             getData(new AemetRequest("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJZTlI0ODk3MEBlZHVjYXN0dXIuZXMiLCJqdGkiOiJmMzdhODJhNC01MDY4LTQzMjQtYmM3Yy05Y2Y3ZDU2ODkzOWQiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcwMjQyMzM0NiwidXNlcklkIjoiZjM3YTgyYTQtNTA2OC00MzI0LWJjN2MtOWNmN2Q1Njg5MzlkIiwicm9sZSI6IiJ9.d-lrI0xVGEpKRgWhIaHOj4JscSzXjfKSSuzwRbcY0NY",
-            "2"));
+            "{}"));
         }
         catch(UnirestException ex){
             Logger.getLogger(AemetTest.class.getName()).log(Level.SEVERE, null, ex);
